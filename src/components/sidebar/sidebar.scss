@@ -12,7 +12,7 @@
         height: 120px;
         font-size: 1.5rem;
         font-weight: 700;
-        font-family: 'Mochiy Pop P one', sans-serif;
+        font-family: sans-serif;
     }
 
     &__menu {
@@ -47,7 +47,7 @@
             left: 50%;
             width: calc(100% - 40px);
             border-radius: 10px;
-            background-color: #308efe;
+            background-color: #0F52BA;
             z-index: -1;
             transform: translateX(-50%);
             transition: 0.3s ease-in-out;

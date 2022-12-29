@@ -10,28 +10,28 @@ const sidebarNavItems = [
         section: ''
     },
     {
-        display: 'Getting Started',
-        icon: <i className='bx bx-star'></i>,
-        to: '/started',
-        section: 'started'
-    },
-    {
-        display: 'Calendar',
+        display: 'Manage Timetable',
         icon: <i className='bx bx-calendar'></i>,
-        to: '/calendar',
-        section: 'calendar'
+        to: '/timetable',
+        section: 'timetable'
     },
     {
-        display: 'User',
+        display: 'Manage Faculty',
         icon: <i className='bx bx-user'></i>,
-        to: '/user',
-        section: 'user'
+        to: '/faculty',
+        section: 'faculty'
     },
     {
-        display: 'Orders',
+        display: 'Upload Video',
+        icon: <i className='bx bx-upload'></i>,
+        to: '/upload',
+        section: 'upload'
+    },
+    {
+        display: 'View Summary',
         icon: <i className='bx bx-receipt'></i>,
-        to: '/order',
-        section: 'order'
+        to: '/summary',
+        section: 'summary'
     },
 ]
 
@@ -59,7 +59,7 @@ const Sidebar = () => {
 
     return <div className='sidebar'>
         <div className="sidebar__logo">
-            Animate
+            Admin Portal
         </div>
         <div ref={sidebarRef} className="sidebar__menu">
             <div
