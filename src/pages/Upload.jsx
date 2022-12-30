@@ -28,13 +28,14 @@ export default function Upload() {
         setTime("Select Time");
         setFile();
         setSource();
+        setVenue("Select Venue");
     }
 
     const handleSubmit = () => {
         const stringified = String(date)
         let parts = stringified.split(" ")
         const parsed = parts[1] + "-" + parts[2] + "-" + parts[3]
-        const data = { date: parsed, time, file }
+        const data = { date: parsed, time, venue, file }
         console.log(data);
         // call an API
     }
@@ -87,17 +88,49 @@ export default function Upload() {
                                 <MenuItem value={"03:20"}>03:20</MenuItem>
                             </Select>
 
-                            <Select value={time} style={{ marginTop: 8, marginLeft: 8 }} onChange={(e) => { setTime(e.target.value) }}>
-                                <MenuItem value={"Select Time"}>Select Venue</MenuItem>
-                                <MenuItem value={"08:00"}>08:00</MenuItem>
-                                <MenuItem value={"08:55"}>08:55</MenuItem>
-                                <MenuItem value={"09:50"}>09:50</MenuItem>
-                                <MenuItem value={"10:45"}>10:45</MenuItem>
-                                <MenuItem value={"11:40"}>11:40</MenuItem>
-                                <MenuItem value={"12:35"}>12:35</MenuItem>
-                                <MenuItem value={"01:30"}>01:30</MenuItem>
-                                <MenuItem value={"02:25"}>02:25</MenuItem>
-                                <MenuItem value={"03:20"}>03:20</MenuItem>
+                            <Select value={venue} style={{ marginTop: 8, marginLeft: 8 }} onChange={(e) => { setVenue(e.target.value) }}>
+                                <MenuItem value={"Select Venue"}>Select Venue</MenuItem>
+                                <MenuItem value={"A-1"}>A-1</MenuItem>
+                                <MenuItem value={"A-2"}>A-2</MenuItem>
+                                <MenuItem value={"A-3"}>A-3</MenuItem>
+                                <MenuItem value={"A-4"}>A-4</MenuItem>
+                                <MenuItem value={"A-5"}>A-5</MenuItem>
+                                <MenuItem value={"A-6"}>A-6</MenuItem>
+                                <MenuItem value={"A-7"}>A-7</MenuItem>
+                                <MenuItem value={"A-8"}>A-8</MenuItem>
+                                <MenuItem value={"B-9"}>B-9</MenuItem>
+                                <MenuItem value={"B-10"}>B-10</MenuItem>
+                                <MenuItem value={"B-11"}>B-11</MenuItem>
+                                <MenuItem value={"B-12"}>B-12</MenuItem>
+                                <MenuItem value={"B-11"}>B-11</MenuItem>
+                                <MenuItem value={"C-17"}>C-17</MenuItem>
+                                <MenuItem value={"C-18"}>C-18</MenuItem>
+                                <MenuItem value={"C-19"}>C-19</MenuItem>
+                                <MenuItem value={"C-20"}>C-20</MenuItem>
+                                <MenuItem value={"C-22"}>C-22</MenuItem>
+                                <MenuItem value={"E1"}>E1</MenuItem>
+                                <MenuItem value={"E2"}>E2</MenuItem>
+                                <MenuItem value={"E3"}>E3</MenuItem>
+                                <MenuItem value={"E4"}>E4</MenuItem>
+                                <MenuItem value={"E5"}>E5</MenuItem>
+                                <MenuItem value={"E6"}>E6</MenuItem>
+                                <MenuItem value={"R7"}>R7</MenuItem>
+                                <MenuItem value={"R11"}>R11</MenuItem>
+                                <MenuItem value={"R12"}>R12</MenuItem>
+                                <MenuItem value={"R109"}>R109</MenuItem>
+                                <MenuItem value={"S2"}>S2</MenuItem>
+                                <MenuItem value={"Lab-1"}>Lab-1</MenuItem>
+                                <MenuItem value={"Lab-3"}>Lab-3</MenuItem>
+                                <MenuItem value={"Lab-4"}>Lab-4</MenuItem>
+                                <MenuItem value={"Lab-5"}>Lab-5</MenuItem>
+                                <MenuItem value={"Lab-6"}>Lab-6</MenuItem>
+                                <MenuItem value={"Lab-7"}>Lab-7</MenuItem>
+                                <MenuItem value={"Lab-8"}>Lab-8</MenuItem>
+                                <MenuItem value={"Lab-10"}>Lab-10</MenuItem>
+                                <MenuItem value={"Lab-11"}>Lab-11</MenuItem>
+                                <MenuItem value={"Lab-12"}>Lab-12</MenuItem>
+                                <MenuItem value={"MPI Lab"}>MPI Lab</MenuItem>
+                               
                             </Select>
                         </div>
                     </Box>
