@@ -21,26 +21,26 @@ export default function Timetable() {
 
     return (
         <div>
-            <div class="container">
-                <img src={image} alt="image" style={{height: 400, width: "105%", marginLeft: -50, marginTop: -50, objectFit: "cover"}}/>
-                <div class="bottom-left"><h1 style={{ fontSize: 50 }}>Upload the new timetable here:</h1></div>
+            <div class="container" style={{ backgroundColor: "pink" }}>
+                <img src={image} alt="image" style={{ height: 400, width: "100%", marginTop: -50, objectFit: "cover" }} />
+                <div class="bottom-left"><h1 style={{ fontSize: 50 }}>Upload the new timetable here</h1></div>
             </div>
+            <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
+                <div style={{ width: "95%" }}>
 
-            <div style={{width: "95%"}}>
-                
-                <div style={{ marginTop: 50}}>
-                    <FileUpload value={file} onChange={setFile} />
-                </div>
-                <div style={{display: "flex", flexDirection: "row", marginTop: 10, justifyContent: "space-between"}}>
-                    <div></div>
-                    <div>
-                        <Button variant="contained" onClick={handleSubmit}>Submit</Button>
-                        <Button variant="contained" color="error" onClick={handleReset} style={{margin: 20}}>Reset</Button>
+                    <div style={{ marginTop: 50 }}>
+                        <FileUpload value={file} onChange={setFile} />
+                    </div>
+                    <div style={{ display: "flex", flexDirection: "row", marginTop: 10, justifyContent: "space-between" }}>
+                        <div></div>
+                        <div>
+                            <Button variant="contained" onClick={handleSubmit}>Submit</Button>
+                            <Button variant="contained" color="error" onClick={handleReset} style={{ margin: 20 }}>Reset</Button>
+                        </div>
                     </div>
                 </div>
             </div>
-             {/* <img src={image} style={{width: "60%", height: "100%"}} alt="image" /> */}
-       </div>
+        </div>
     );
 }
 

@@ -45,9 +45,12 @@ export default function Faculty() {
   return (
     <div>
       <div class="container">
-        <img src={image} alt="image" style={{ height: 300, width: "105%", marginLeft: -50, marginTop: -50, objectFit: "cover" }} />
-        <div class="bottom-left"><h1 style={{ fontSize: 50 }}>Upload new faculty member here:</h1></div>
+        <img src={image} alt="image" style={{ height: 400, width: "100%",marginTop: -50, objectFit: "cover" }} />
+        <div class="bottom-left"><h1 style={{ fontSize: 50 }}>Add faculty member here</h1></div>
       </div>
+
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <div style={{ width: "95%" }}>
       <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
         <Box
           component="form"
@@ -86,7 +89,7 @@ export default function Faculty() {
                     <img class="absolute inset-0 object-cover 
                                group-hover:opacity-50"
                         src={file? preview: dummy} style={{width: 300, height: 300, borderRadius: 200}} />
-                    <div class="relative p-5">
+                    <div class="relative p-5 " >
                         <div class="mt-40">
                             <div class="transition-all transform 
                                 translate-y-8 opacity-0 
@@ -108,6 +111,8 @@ export default function Faculty() {
                 </a>
             </div>
         </div>
+      </div>
+      </div>
       </div>
       <div style={{ width: "95%" }}>
         <></>
