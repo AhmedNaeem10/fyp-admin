@@ -14,7 +14,7 @@ import IconButton from "@mui/material/IconButton";
 import { getAllSlots, getAllVenues, getSummary } from "../api/client.js";
 
 const columns = [
-  { field: "id", headerName: "ID", width: 50 },
+  { field: "id", headerName: "ID", width: 50, hide: true },
   {
     field: "time",
     headerName: "Time",
@@ -299,8 +299,8 @@ export default function DataGridDemo() {
           </div>
           <Box
             sx={{
-              height: "80%",
-              width: "80%",
+              height: 300,
+              width: "100%",
             }}
           >
             {data.length === 0 ? (
