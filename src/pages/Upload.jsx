@@ -44,6 +44,7 @@ export default function Upload() {
         ]);
         if (res1.status === "fulfilled") {
           setSlots(res1.value.data);
+          console.log(res1.value.data);
         } else {
           throw new Error(res1.reason.response.data.detail);
         }
