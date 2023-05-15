@@ -64,6 +64,18 @@ export default function DataGridDemo() {
   const [slots, setSlots] = useState([]);
   const [venues, setVenues] = useState([]);
 
+  const createRows = (arr) => {
+    let results = []
+    for(let x of arr){
+      results.push(createRow(x))
+    }
+    return results;
+  }
+
+  const createRow = (arr) => {
+    return {id: arr[0], Name: arr[3], Email: arr[2], VenueName: arr[4], checkInTime: arr[6], checkOutTime: arr[7], time: arr[8] }
+  }
+
   const getDate = () => {
     const today = new Date().toDateString();
     let parts = today.split(" ");
@@ -108,9 +120,9 @@ export default function DataGridDemo() {
           // const response = await axios.get(PASS DATE HERE);
           // setData(response.data)
           const res = await getSummary(tempdate);
-
-          setData(res.data.data);
-          setCopy(res.data.data);
+          const rows = createRows(res.data.data);
+          setData(rows);
+          setCopy(rows);
         }
       } catch (err) {
         toast.error(err.response.data.detail, {
